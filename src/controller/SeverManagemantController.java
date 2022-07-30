@@ -1,6 +1,5 @@
 package controller;
 
-
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -36,7 +35,6 @@ public class SeverManagemantController implements Initializable {
     public Button btnSend;
     private Server server;
 
-
     public static void addLabel(String messageFormClient, VBox vbox) {
         HBox hBox = new HBox();
         hBox.setAlignment(Pos.CENTER_LEFT);
@@ -44,7 +42,7 @@ public class SeverManagemantController implements Initializable {
 
         Text text = new Text(messageFormClient);
         TextFlow textFlow = new TextFlow(text);
-        textFlow.setStyle(" -fx-background-color: rgb(233,233,255); -fx-background-radius: 20px");
+        textFlow.setStyle(" -fx-background-color: rgb(233,233,255);"+" -fx-background-radius: 20px");
         textFlow.setPadding(new Insets(5, 10, 5, 10));
         hBox.getChildren().add(textFlow);
 
@@ -80,6 +78,7 @@ public class SeverManagemantController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 String massageToSend = txtMassage.getText();
+
                 if (!massageToSend.isEmpty()) {
                     HBox hBox = new HBox();
                     hBox.setAlignment(Pos.BASELINE_RIGHT);
@@ -87,9 +86,7 @@ public class SeverManagemantController implements Initializable {
 
                     Text text = new Text(massageToSend);
                     TextFlow textFlow = new TextFlow(text);
-
-
-                    textFlow.setStyle("-fx-color: rgb(239,242,255); -fx-background-color: rgb(15,125,242); -fx-background-radius: 20px");
+                    textFlow.setStyle("-fx-color: rgb(239,242,255);"+"-fx-background-color: rgb(15,125,242);"+" -fx-background-radius: 20px");
 
                     textFlow.setPadding(new Insets(5, 10, 5, 10));
                     text.setFill(Color.color(0.934, 0.945, 0.996));

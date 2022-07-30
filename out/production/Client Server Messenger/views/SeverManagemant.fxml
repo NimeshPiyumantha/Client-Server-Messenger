@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="632.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SeverManagemantController">
@@ -14,7 +15,10 @@
                 <Font name="Bodoni MT Bold" size="36.0" />
             </font>
         </Label>
-        <ScrollPane fx:id="sp_Main" layoutX="28.0" layoutY="102.0" prefHeight="453.0" prefWidth="448.0" />
+        <ScrollPane fx:id="sp_Main" layoutX="28.0" layoutY="102.0" prefHeight="453.0" prefWidth="448.0">
+         <content>
+            <VBox fx:id="vboxMassnger" prefHeight="450.0" prefWidth="444.0" />
+         </content></ScrollPane>
         <TextField fx:id="txtMassage" layoutX="29.0" layoutY="570.0" prefHeight="38.0" prefWidth="370.0" />
         <Button fx:id="btnSend" layoutX="413.0" layoutY="570.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="62.0" text="Send" />
     </children>
