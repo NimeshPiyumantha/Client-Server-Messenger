@@ -8,7 +8,7 @@ This is using Java Sockets and Simple GUI Chatting Programmed.
 * Java Sockets
 
 ##
-![alt text](https://github.com/NimeshPiyumantha/Client-Server-Messenger/blob/master/src/views/assests/ScreentShort/clientSever.png)
+![alt text](https://github.com/NimeshPiyumantha/Client-Server-Messenger/blob/master/src/com/Nimesh/sokectProgramming/views/assests/ScreentShort/clientSever.png)
 ##
 
 
