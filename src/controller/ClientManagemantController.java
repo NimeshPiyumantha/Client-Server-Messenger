@@ -8,14 +8,17 @@ import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.Stage;
 import model.Client;
 
 import java.io.IOException;
@@ -97,5 +100,22 @@ public class ClientManagemantController implements Initializable {
                 }
             }
         });
+    }
+
+    //----------------------UI Controller------------------//
+    public void BtnCloseOnAction(MouseEvent mouseEvent) {
+        Platform.exit();
+        System.exit(0);
+    }
+
+    public void BtnRestoreDownOnAction(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        stage.setFullScreenExitHint("");
+        stage.setResizable(true);
+    }
+
+    public void BtnMinimizeOnAction(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        stage.setIconified(true);
     }
 }

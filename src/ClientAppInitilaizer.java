@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -21,9 +22,8 @@ public class ClientAppInitilaizer extends Application {
     public void start(Stage primaryStage) throws IOException {
 
         primaryStage.setScene(new Scene(FXMLLoader.load((getClass().getResource("views/ClientManagemant.fxml")))));
-        primaryStage.centerOnScreen();
         primaryStage.setTitle("Client");
-        //  primaryStage.initStyle(StageStyle.UNDECORATED);
+      //  primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 }
