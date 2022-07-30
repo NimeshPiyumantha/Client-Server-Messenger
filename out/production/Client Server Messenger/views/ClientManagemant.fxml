@@ -5,11 +5,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.TextFlow?>
-
 
 <AnchorPane prefHeight="632.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientManagemantController">
    <children>
@@ -18,17 +14,8 @@
             <Font name="Bodoni MT Bold" size="36.0" />
          </font>
       </Label>
-      <ScrollPane fx:id="sp_Main" layoutX="28.0" layoutY="102.0" prefHeight="453.0" prefWidth="448.0">
-         <content>
-            <VBox fx:id="vboxMassenger" prefHeight="446.0" prefWidth="444.0">
-               <children>
-                  <HBox prefHeight="67.0" prefWidth="321.0" />
-                  <TextFlow prefHeight="64.0" prefWidth="448.0" />
-               </children>
-            </VBox>
-         </content>
-      </ScrollPane>
-      <TextField fx:id="txtMasege" layoutX="29.0" layoutY="570.0" prefHeight="38.0" prefWidth="370.0" />
+      <ScrollPane fx:id="sp_Main" layoutX="28.0" layoutY="102.0" prefHeight="453.0" prefWidth="448.0" />
+      <TextField fx:id="txtMassage" layoutX="29.0" layoutY="570.0" prefHeight="38.0" prefWidth="370.0" />
       <Button fx:id="btnSend" layoutX="413.0" layoutY="570.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="62.0" text="Send" />
    </children>
 </AnchorPane>

@@ -25,5 +25,14 @@ public class AppInitilizer extends Application {
         //  primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
 
+
+/*
+        primaryStage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("views/SeverManagemant.fxml")))));
+        primaryStage.centerOnScreen();
+        primaryStage.setTitle("Sever");
+        //  primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.show();
+*/
+
     }
 }
