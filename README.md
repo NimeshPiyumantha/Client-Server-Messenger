@@ -1,7 +1,7 @@
 # Client-Server-Messenger
 This is using Java Sockets and Simple GUI Chatting Programmed.
 
-### - My Profile
+### - Client-Server-Messenger
 * Java
 * JavaFx
 * CSS
