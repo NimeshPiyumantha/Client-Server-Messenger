@@ -20,7 +20,7 @@ public class SeverAppInitilaizer extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        primaryStage.setScene(new Scene(FXMLLoader.load((getClass().getResource("views/SeverManagemant.fxml")))));
+        primaryStage.setScene(new Scene(FXMLLoader.load((getClass().getResource("com/Nimesh/sokectProgramming/views/SeverManagemant.fxml")))));
         primaryStage.setTitle("Sever");
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();

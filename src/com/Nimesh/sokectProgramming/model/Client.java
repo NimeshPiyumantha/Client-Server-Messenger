@@ -1,7 +1,6 @@
-package model;
+package com.Nimesh.sokectProgramming.model;
 
-import controller.ClientManagemantController;
-import controller.SeverManagemantController;
+import com.Nimesh.sokectProgramming.controller.ClientManagemantController;
 import javafx.scene.layout.VBox;
 
 import java.io.*;

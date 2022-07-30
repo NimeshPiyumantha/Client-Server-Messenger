@@ -1,4 +1,4 @@
-package controller;
+package com.Nimesh.sokectProgramming.controller;
 
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -19,10 +19,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
-import model.Client;
+import com.Nimesh.sokectProgramming.model.Server;
 
 import java.io.IOException;
-import java.net.Socket;
+import java.net.ServerSocket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -30,20 +30,20 @@ import java.util.ResourceBundle;
  * @author : Nimesh Piyumantha
  * @since : 0.1.0
  **/
-public class ClientManagemantController implements Initializable {
+public class SeverManagemantController implements Initializable {
 
     public ScrollPane sp_Main;
+    public VBox vboxMassnger;
     public TextField txtMassage;
     public Button btnSend;
-    public VBox vboxMassnger;
-    private Client client;
+    private Server server;
 
-    public static void addLabel(String messageFormSever, VBox vbox) {
+    public static void addLabel(String messageFormClient, VBox vbox) {
         HBox hBox = new HBox();
         hBox.setAlignment(Pos.CENTER_LEFT);
         hBox.setPadding(new Insets(5, 5, 5, 10));
 
-        Text text = new Text(messageFormSever);
+        Text text = new Text(messageFormClient);
         TextFlow textFlow = new TextFlow(text);
         textFlow.setStyle(" -fx-background-color: rgb(233,233,255);"+" -fx-background-radius: 20px");
         textFlow.setPadding(new Insets(5, 10, 5, 10));
@@ -61,31 +61,33 @@ public class ClientManagemantController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         try {
-            client = new Client(new Socket("localhost", 8000));
-            System.out.println("Connected to Sever.");
+            server = new Server(new ServerSocket(8000));
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Error creating server.");
         }
+
         vboxMassnger.heightProperty().addListener(new ChangeListener<Number>() {
+
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 sp_Main.setVvalue((Double) newValue);
             }
         });
 
-        client.receivedMessageFormSever(vboxMassnger);
+        server.receiveMassageFromClient(vboxMassnger);
 
         btnSend.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                String messageToSend = txtMassage.getText();
+                String massageToSend = txtMassage.getText();
 
-                if (!messageToSend.isEmpty()) {
+                if (!massageToSend.isEmpty()) {
                     HBox hBox = new HBox();
-                    hBox.setAlignment(Pos.CENTER_RIGHT);
-
+                    hBox.setAlignment(Pos.BASELINE_RIGHT);
                     hBox.setPadding(new Insets(5, 5, 5, 10));
-                    Text text = new Text(messageToSend);
+
+                    Text text = new Text(massageToSend);
                     TextFlow textFlow = new TextFlow(text);
                     textFlow.setStyle("-fx-color: rgb(239,242,255);"+"-fx-background-color: rgb(15,125,242);"+" -fx-background-radius: 20px");
 
@@ -95,7 +97,7 @@ public class ClientManagemantController implements Initializable {
                     hBox.getChildren().add(textFlow);
                     vboxMassnger.getChildren().add(hBox);
 
-                    client.sendMassageSever(messageToSend);
+                    server.sendMassageClient(massageToSend);
                     txtMassage.clear();
                 }
             }

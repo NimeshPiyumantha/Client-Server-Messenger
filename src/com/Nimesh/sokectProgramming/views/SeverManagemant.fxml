@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="bgColor" prefHeight="605.0" prefWidth="512.0" stylesheets="@assests/styles/Sheat.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientManagemantController">
+<AnchorPane id="bgColor" prefHeight="603.0" prefWidth="512.0" stylesheets="@assests/styles/Sheat.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Nimesh.sokectProgramming.controller.SeverManagemantController">
     <children>
         <Label layoutX="84.0" layoutY="42.0" prefHeight="44.0" prefWidth="370.0">
             <font>
@@ -20,7 +20,7 @@
         </Label>
         <ScrollPane fx:id="sp_Main" layoutX="32.0" layoutY="78.0" prefHeight="453.0" prefWidth="448.0" style="-fx-background-color: #ecf0f1;">
             <content>
-                <VBox fx:id="vboxMassnger" prefHeight="450.0" prefWidth="438.0" style="-fx-background-color: #dff9fb;" />
+                <VBox fx:id="vboxMassnger" prefHeight="448.0" prefWidth="438.0" style="-fx-background-color: #dff9fb;" />
             </content>
         </ScrollPane>
         <TextField fx:id="txtMassage" layoutX="32.0" layoutY="545.0" prefHeight="38.0" prefWidth="362.0" style="-fx-background-color: #95afc0;" />
@@ -42,14 +42,14 @@
                         <Image url="@assests/Images/minimize.png" />
                     </image>
                 </ImageView>
-                <Text id="test" layoutX="72.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Chat Maseenger" wrappingWidth="252.0537109375">
+                <Text id="test" layoutX="72.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sever Chat Maseenger" wrappingWidth="252.0537109375">
                     <font>
                         <Font name="Algerian" size="22.0" />
                     </font>
                 </Text>
                 <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="20.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" styleClass="btn1">
                     <image>
-                        <Image url="@assests/Images/technical-support.png" />
+                        <Image url="@assests/Images/admin.png" />
                     </image>
                 </ImageView>
             </children>
