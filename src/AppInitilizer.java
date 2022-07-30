@@ -4,7 +4,12 @@
  **/
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class AppInitilizer extends Application {
 
@@ -13,7 +18,12 @@ public class AppInitilizer extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("views/ClientManagemant.fxml")))));
+        primaryStage.centerOnScreen();
+        primaryStage.setTitle("Client");
+        //  primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.show();
 
     }
 }

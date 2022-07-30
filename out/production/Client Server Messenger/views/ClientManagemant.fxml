@@ -20,7 +20,7 @@
       </Label>
       <ScrollPane fx:id="sp_Main" layoutX="28.0" layoutY="102.0" prefHeight="453.0" prefWidth="448.0">
          <content>
-            <VBox fx:id="vboxMassnger" prefHeight="446.0" prefWidth="444.0">
+            <VBox fx:id="vboxMassenger" prefHeight="446.0" prefWidth="444.0">
                <children>
                   <HBox prefHeight="67.0" prefWidth="321.0" />
                   <TextFlow prefHeight="64.0" prefWidth="448.0" />
@@ -28,7 +28,7 @@
             </VBox>
          </content>
       </ScrollPane>
-      <TextField fx:id="txtMassage" layoutX="29.0" layoutY="570.0" prefHeight="38.0" prefWidth="370.0" />
+      <TextField fx:id="txtMasege" layoutX="29.0" layoutY="570.0" prefHeight="38.0" prefWidth="370.0" />
       <Button fx:id="btnSend" layoutX="413.0" layoutY="570.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="62.0" text="Send" />
    </children>
 </AnchorPane>
